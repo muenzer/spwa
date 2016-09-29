@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" type="text/css" href="http://fastly.ink.sapo.pt/3.1.10/css/ink.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="ShoppingListCheckOff">
+    <div class="ink-grid">
+      <div class="column-group">
+        <div class="all-50 small-100 tiny-100" ng-controller="ToBuyController as tobuy">
+          <h1>To Buy</h1>
+          <p ng-if="tobuy.items.length == 0">{{tobuy.emptyMessage}}</p>
+          <ul>
+            <li ng-repeat="item in tobuy.items">{{"Buy " + item.quantity + " " + item.name}}<button type="button" ng-click="tobuy.bought($index)">Bought</button></li>
+          </ul>
+        </div>
+        <div class="all-50 small-100 tiny-100" ng-controller="AlreadyBoughtController as bought">
+          <h1>Already Bought</h1>
+          <p ng-if="bought.items.length == 0">{{bought.emptyMessage}}</p>
+          <ul>
+            <li ng-repeat="item in bought.items">{{"Bought " + item.quantity + " " + item.name}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
