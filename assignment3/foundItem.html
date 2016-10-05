@@ -1,0 +1,13 @@
+<div class="ink-grid">
+  <div class="column-group gutters">
+    <div class="all-33" ng-repeat="item in found">
+      <div>
+        <h1>{{item.short_name}}</h1><span>{{item.name}}</span>
+      </div>
+      <p>
+        {{item.description}}
+      </p>
+      <button type="button" ng-click="onRemove({index: $index})">Don't want this one!</button>
+    </div>
+  </div>
+</div>
