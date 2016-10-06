@@ -37,7 +37,6 @@ function NarrowItDownController(MenuSearchService) {
   };
 
   narrow.remove = function (index) {
-    console.log("remove: " + index);
     narrow.found.splice(index, 1);
   };
 }
