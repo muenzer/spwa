@@ -10,11 +10,26 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.ink.sapo.pt/3.1.10/css/ink-flex.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
     <script src="menuapp.module.js" charset="utf-8"></script>
-    <script src="data.module.js" charset="utf-8"></script>
-    <script src="menudata.service.js" charset="utf-8"></script>
+
+    <!-- Data Module -->
+    <script src="data/data.module.js" charset="utf-8"></script>
+    <script src="data/menudata.service.js" charset="utf-8"></script>
+
+    <script src="routes.js" charset="utf-8"></script>
+
+    <script src="categories.component.js" charset="utf-8"></script>
+    <script src="categories.controller.js" charset="utf-8"></script>
+    <script src="items.component.js" charset="utf-8"></script>
+    <script src="items.controller.js" charset="utf-8"></script>
   </head>
-  <body ng-app="MenuApp">
+  <body ng-app="MenuApp" class="space">
+    <h1>Welcome to our Restaurant</h1>
+
+    <h2>Menu:</h2>
+
+    <ui-view />
 
   </body>
 </html>
