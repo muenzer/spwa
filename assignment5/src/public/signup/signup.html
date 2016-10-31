@@ -3,24 +3,24 @@
   <form id="signupForm" novalidate>
     <div class="form-group">
       <label>First Name</label>
-      <input type="text" class="form-control" id="FirstName" placeholder="Enter First Name">
+      <input type="text" class="form-control" id="FirstName" placeholder="Enter First Name" ng-model="signupCtrl.signup.firstname">
     </div>
     <div class="form-group">
       <label>Last Name</label>
-      <input type="text" class="form-control" id="LastName" placeholder="Enter Last Name">
+      <input type="text" class="form-control" id="LastName" placeholder="Enter Last Name" ng-model="signupCtrl.signup.lastname">
     </div>
     <div class="form-group">
       <label>Email Address</label>
-      <input type="email" class="form-control" id="EmailAddress" placeholder="Enter Email Address">
+      <input type="email" class="form-control" id="EmailAddress" placeholder="Enter Email Address" ng-model="signupCtrl.signup.email">
     </div>
     <div class="form-group">
       <label>Phone Number</label>
-      <input type="tel" class="form-control" id="PhoneNumber" placeholder="Enter Phone Number">
+      <input type="tel" class="form-control" id="PhoneNumber" placeholder="Enter Phone Number" ng-model="signupCtrl.signup.phone">
     </div>
     <div class="form-group">
       <label>Favorite Dish</label>
-      <input type="text" class="form-control" id="MenuItem" placeholder="Enter Menu Item Number">
+      <input type="text" class="form-control" id="MenuItem" placeholder="Enter Menu Item Number" ng-model="signupCtrl.signup.shortname">
     </div>
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="submit" class="btn btn-default" ng-click="signupCtrl.submit()">Submit</button>
   </form>
 </div>
